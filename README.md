@@ -1,5 +1,5 @@
 # MecanicaNewtoniana
 Integrantes:
-Daniel Salinas
-Cristian Torres
+Daniel Salinas,
+Cristian Torres,
 Sebastian Oliveros
