@@ -4,19 +4,332 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Mecanica Newtoniana</title>
 </head>
 <body>
-    <div class="contenedor">
-        <button id="btn1" type="button" class="btn btn-secondary">A y B</button>  
-        <button id="btn2" type="button" class="btn btn-secondary">C, D y sus aplicaciones</button>  
-    </div>
-    <canvas id='lienzo' width="600px" height="600px">
-        Su navegador no soporta Canvas! Actualiza!
-    </canvas>
-    <script src="script.js"></script>
+    <header>
+        <div>
+            <h1>MECANICA NEWTONIANA</h1>
+            <p>La mecánica newtoniana o mecánica vectorial es una formulación específica de la mecánica clásica que estudia 
+                el movimiento de partículas y sólidos en un espacio euclídeo tridimensional. Los cuerpos tienen velocidad inicial 
+                básica de la misma se hace en sistemas de referencia inerciales donde las ecuaciones básicas del movimiento se reducen 
+                a las leyes de Newton, en honor a Isaac Newton, quien hizo contribuciones fundamentales a esta teoría.</p>
+        </div>
+    </header>
+    <section>
+        <div class="contenedor">
+            <p><b>La mecánica:</b> Es la parte de la física que estudia el movimiento. 
+                <br>Se subdivide en:
+            </p>
+            <li><b>Estática:</b> Trata sobre las fuerzas en equilibrio mecánico.</li>
+            <li><b>Cinemática:</b> Estudia el movimiento sin tener en cuenta las causas que lo producen.</li>
+            <li><b>Dinámica:</b> Estudia los movimientos y las causas que los producen (fuerza y energía).</li>
+            <p><br>La mecánica newtoniana es adecuada para describir eventos físicos de la experiencia diaria, es decir, 
+                a eventos que suceden a velocidades muchísimo menores que la velocidad de la luz y tienen escala macroscópica. 
+                En el caso de sistemas con velocidades próximas a la velocidad de la luz debemos acudir a la mecánica relativista.
+            </p>
+
+            <h3>Importancia de la mecánica newtoniana</h3>
+            <p>La mecánica newtoniana es un modelo físico macroscópico para describir el movimiento de los cuerpos en el espacio 
+                relacionando este movimiento con sus causas eficientes (fuerzas). Históricamente, la mecánica newtoniana fue el 
+                primer modelo dinámico capaz de hacer predicciones importantes sobre el movimiento de los cuerpos, incluyendo 
+                las trayectorias de los planetas. Es conceptualmente más simple que otras formulaciones de la mecánica clásica 
+                como la lagrangiana o hamiltoniana, por lo que resulta útil en problemas relativamente sencillos, pero su uso en problemas 
+                complicados puede ser más enredado que las otras dos formulaciones.<br>
+                Y, por supuesto, la mecánica newtoniana es relativamente más sencilla que una teoría como la mecánica cuántica relativista, 
+                que describe adecuadamente incluso fenómenos partículas elementales moviéndose a gran velocidad y entornos microscópicos, 
+                que no pueden ser adecuadamente modelizados por la mecánica newtoniana.<br>
+                La mecánica newtoniana es suficientemente válida para la gran mayoría de los casos prácticos cotidianos en una gran 
+                cantidad de sistemas. Esta teoría, por ejemplo, describe con gran exactitud sistemas como cohetes, movimiento de planetas, 
+                moléculas orgánicas, trompos, trenes y trayectorias de móviles en general.<br>
+                La mecánica clásica de Newton es ampliamente compatible con otras teorías  clásicas como el electromagnetismo y 
+                la termodinámica, también "clásicos" (estas teorías tienen también su equivalente cuántico).
+            </p>
+            <h3>Descripción de la teoría</h3>
+            <p>La mecánica newtoniana se formula sobre un espacio euclídeo tridimensional. La teoría asume la existencia de un tiempo 
+                universal compartido por todos los observadores y asume que las partículas siguen trayectorias trazables bien definidas. 
+                Varios de estos supuestos de la mecánica newtoniana son abandonados en otras teorías físicas como la mecánica 
+                relativista o la mecánica cuántica.
+            </p>
+                
+            <h2>Posición, velocidad y aceleración</h2>
+            <p>La posición de una partícula con respecto a un punto fijo en el espacio se denota con el vector r, cuya norma, |r| = r, 
+                corresponde a la distancia entre el punto fijo y la partícula, y su dirección es la que va desde este punto fijo al lugar 
+                en que se ubica la partícula. Si r es una función del tiempo t, denotado por r = f(t), el tiempo t se toma a partir de un tiempo 
+                inicial arbitrario:<br>
+                <b>r = f(t)</b><br>
+                Entonces resulta que la velocidad y la aceleración (que también son vectores) vienen dadas por:
+            </p>
+            <div class="image">
+                <img src="img/formula8.jpg">
+            </div>
+            <p>La posición indica el lugar del objeto que se está analizando. Si dicho objeto cambia de lugar, la función r describe el nuevo 
+                lugar del objeto. El punto clave de la dinámica newtoniana es que la aceleración viene determinada por la fuerza, siendo una fuerza 
+                cualquier causa eficiente que puede cambiar el estado de movimiento de una partícula (cambiado su capacidad de hacer trabajo o curvando 
+                su trayectoria). Si se dispone de un medio de computar las fuerzas sobre una partícula la trayectoria de una partícula vendrá dada por 
+                la ecuación diferencial:
+            </p>
+            <div class="image">
+                <img src="img/formula9.jpg">
+            </div>
+            <p>donde m es la masa de la partícula.<br> 
+                El tratamiento anterior es el usado para describir la dinámica de la partícula, junto a ese tipo de sistemas de la mecánica newtoniana, 
+                la mecánica del sólido rígido es una extensión de ese enfoque que también se considera parte de la mecánica newtoniana y que requiere 
+                algunos supuestos adicionales, como el que cualquier combinación de fuerzas o admite una fuerza resultante y un momento resultante, y 
+                que bajo esos esfuerzos el movimiento del sólido rígido viene descrito por un grupo uniparamétrico de isometrías.<br>
+                No es que el hecho de que la ecuación (*) sea de segundo orden tiene que ver con el hecho de que para determinar una trayectoria 
+                (curva en el espacio), un teorema de geometría diferencial de curvas demuestra que la curvatura y la torsión determina la curva salvo 
+                traslación y rotación, por lo que si se especifica la posición inicial (traslación) y la velocidad (rotación) queda determinada 
+                la curva o trayectoria de manera única (ya que tanto la curvatura y la torsión de dicha curva son combinaciones de derivadas primeras y 
+                segundas).
+            </p>
+
+            <h2>La ley de gravitación universal</h2>
+            <p>Newton predijo además la fuerza entre dos masas debida a la gravitación. Es atractiva, en la dirección de la recta que las une, 
+                proporcional a las masas (denotadas por MM y mm) y disminuye proporcionalmente al cuadrado de la distancia que las separa.
+            </p>
+            <div class="image">
+                <img src="img/Formula1.JPG" alt="">
+            </div>
+            <p>La función de la constante GG es ajustar los valores al sistema internacional, que define el metro, el segundo, etc.</p>
+            <div class="image">
+                <img src="img/Formula2.JPG" alt="">
+            </div>
+            <p>Tomando la segunda ley y la de gravitación universal, se puede igualar la fuerza y expresar</p>
+            <div class="image">
+                <img src="img/Formula3.JPG" alt="">
+            </div>
+            <p>Que eliminando la referencia a m, nos indica que la aceleración gravitacional ejercida por un cuerpo A sobre otro cuerpo B, sólo 
+                depende de la masa del cuerpo A, independientemente de la masa del cuerpo B
+            </p>
+            <div class="image">
+                <img src="img/Formula4.JPG" alt="">
+            </div>
+            <p>y su módulo vale 9,81m/s^2 en la superficie de la tierra, apuntando hacia el centro. Esto significa que un cuerpo en caída libre cerca de la 
+                superficie de la tierra cae 9,81m/s^2 más deprisa cada segundo que pasa, y no depende de su masa. Por eso se cuenta que cuando Galileo dejó 
+                caer desde la torre de Pisa dos bolas de distinto peso llegaron al suelo a la vez.<br>
+                Por ejemplo la gravedad en otros astros menos pesados como la Luna es 1,6m/s^2 y Marte 3,7m/s^2. Sin embargo en otros más pesados como 
+                Júpiter es de 24,8m/s^2 o el Sol nada menos que 274m/s^2. Una persona pesaría en el Sol 27 veces más que en la Tierra.<br>
+                Préstese atención al detalle de que la fórmula de la fuerza gravitacional se refiere a masas puntuales. Usando el cálculo integral se puede 
+                demostrar que una masa esférica se comporta como si toda su masa estuviera en su centro. Esto facilita los cálculos de órbitas y en general 
+                el estudio de la dinámica de los cuerpos masivos sujetos a la acción gravitatoria.<br>
+                Parece que este es el momento de comentar que la ley de gravitación de Newton es una buena aproximación a la realidad, pero en algunos casos 
+                no llega a la precisión que aporta teoría de la relatividad general de Einstein. Por ejemplo la precesión del perihelio 
+                (punto más cercano al Sol) de Mercurio, no es explicable con la teoría gravitacional de Newton y sí con la de Einstein.
+            </p>
+
+            <h2>Maquina simples y compuestas</h2>
+            <p>Casi todas las herramientas que usamos en nuestras vidas diarias son una máquina compuesta. Una máquina compuesta es meramente una combinación de dos o más máquinas simples.<br>
+                Las máquinas son mecanismos que hacen que el trabajo sea más fácil y rápido, porque ayudan a aumentar nuestra fuerza. Pueden ser simples y compuestas.
+                Las máquinas simples están formadas por una o por pocas piezas y sirven para modificar las fuerzas. Las máquinas compuestas están formadas por muchas piezas diferentes y combinan muchas máquinas simples, tales como palancas, ruedas, poleas y engranajes para realizar su trabajo.
+            </p>
+
+            <h3>¿Cuáles son las máquinas simples y compuestas ejemplos?</h3>
+            <p>Las máquinas simples pueden ser consideradas como los "bloques de construcción" elementales a partir de los que se diseñan máquinas más complejas (denominadas en ocasiones "máquinas compuestas" como, por ejemplo, el mecanismo de una bicicleta, donde se utilizan ruedas, palancas y poleas).</p>
+
+            <h3>Las máquinas simples clásicas</h3>
+            <p>De acuerdo con la clasificación tradicional, las seis máquinas simples son:</p>
+            <div class="image">
+                <img src="img/Mecanica_simple.jpg" alt="">
+            </div>
+            <h4>Palanca</h4>
+            <p>La palanca es una barra rígida con un punto de apoyo, llamado fulcro, a la que se aplica una fuerza y que, girando sobre el punto de apoyo, vence una resistencia. Se cumple la conservación de la energía y, por lo tanto, la fuerza aplicada por su espacio recorrido ha de ser igual a la fuerza de resistencia por su espacio recorrido.</p>
+
+            <h4>Torno</h4>
+            <p>Es un dispositivo mecánico generalmente utilizado para mover verticalmente grandes pesos. Está formado por una cuerda de la que se fija uno de los extremos a la carga a desplazar y el otro extremo a un cilindro que es a su vez fijado de tal manera que solo puede rotar en torno a su eje principal. Actuando el cilindro con una manivela la cuerda se enrolla sobre él, consiguiendo subir la carga.</p>
+
+            <h4>Polea</h4>
+            <p>Es un aparato mecánico de tracción constituido por una rueda acanalada o roldana por donde pasa una cuerda, lo que permite transmitir una fuerza en una dirección diferente a la aplicada. Además, formando aparejos o polipastos de dos o más poleas es posible también aumentar la magnitud de la fuerza transmitida para mover objetos pesados, a cambio de la reducción del desplazamiento producido.</p>
+
+            <h4>Plano inclinado</h4>
+            <p>En el plano inclinado se aplica una fuerza para vencer la resistencia vertical del peso del objeto a levantar. Dado el principio de conservación de la energía, cuanto más pequeño sea el ángulo del plano inclinado, más peso se podrá elevar con la misma fuerza aplicada, pero a cambio, la distancia a recorrer será mayor.</p>
+
+            <h4>Cuña</h4>
+            <p>La cuña transforma una fuerza aplicada a su extremo romo en dos fuerzas perpendiculares a la primera y de sentido contrario entre ellas. El ángulo de la cuña determina la proporción entre la fuerza aplicada y las resultantes, de un modo parecido al plano inclinado. Es el caso de hachas o cuchillos.</p>
+
+            <h4>Tornillo</h4>
+            <p>El mecanismo transforma un movimiento giratorio aplicado a un volante o manilla, en otro rectilíneo en el husillo, mediante un mecanismo de tornillo y tuerca. La fuerza aplicada por la longitud de la circunferencia del volante ha de ser igual a la fuerza resultante por el avance del husillo. Dado el gran desarrollo de la circunferencia y el normalmente pequeño avance del husillo, la relación entre las fuerzas es muy grande. Herramientas como el gato del coche o el sacacorchos derivan del funcionamiento del tornillo.</p>
+
+            <h3>Máquinas compuestas</h3>
+            <p>Las máquinas compuestas son aquellos dispositivos mecánicos los cuales han sido formados a partir de un dos o más máquinas más simples las cuales se conectan en serie. Al estar conectadas de esta forma, cuando se activa una de estas partes de la máquina compuesta, el resto trabajan de forma coordinada, pudiendo ofrecer en conjunto una función que individualmente no podrían.<br>
+                La ventaja mecánica de una máquina compuesta es la relación entre la fuerza resultante ejercida por la última máquina de la serie, dividida por la fuerza aplicada a la primera máquina, que es
+            </p>
+
+            <div class="image">
+                <img src="img/Formula10.jpg" alt="">
+            </div>
+
+            <p>Debido a que la fuerza resultante de cada máquina es la aplicada en la siguiente</p>
+
+            <div class="image">
+                <img src="img/Formula11.jpg" alt="">
+            </div>
+
+            <p>la ventaja mecánica también viene dada por</p>
+            <div class="image">
+                <img src="img/Formula12.jpg" alt="">
+            </div>
+
+            <p>Por lo tanto, la ventaja mecánica de la máquina compuesta es igual al producto de las ventajas mecánicas de la serie de máquinas simples que la forman</p>
+
+            <div class="image">
+                <img src="img/Formula13.jpg" alt="">
+            </div>
+
+            <p>Del mismo modo, la eficiencia de una máquina compuesta es también el producto de los rendimientos de la serie de máquinas simples que la forman</p>
+
+            <div class="image">
+                <img src="img/formula14.jpg" alt="">
+            </div>
+
+            <p>Las máquinas compuestas funcionan por pasos y están formadas por muchos componentes u OPERADORES que trabajan de forma coordinada.  Hay dos tipos de operadores: MECÁNICOS y ELÉCTRICOS.</p>
+
+            <h4>Operadores Mecanicos</h4>
+            <p>La unión de operadores mecánicos permite que se formen mecanismos y la unión de éstos da origen a las máquinas.<br>
+                El conjunto de varios operadores se denomina mecanismo, los más importantes son:
+            </p>
+
+            <li><b>Los ejes:</b> sirven de punto de apoyo a la rueda</li>
+            <li><b>Manivela:</b> Pieza mecánica con forma de ángulo recto, que, al girarla con la mano, hace mover un eje y pone en funcionamiento un motor o mecanismo.</li>
+            <li><b>Poleas:</b> Una polea es una rueda que tiene un ranura o acanaladura en su periferia, que gira alrededor de un eje que pasa por su centro. Esta ranura sirve para que, a través de ella, pase una cuerda.</li>
+            <li><b>Engranaje:</b> Es una rueda que puede girar y que tiene dientes en su periferia con la misión de engranar (encajar) con los dientes de otra rueda para transmitir el movimiento.</li>
+            <li><b>Tornillo sin fin:</b> Se utiliza para transmitir la potencia entre ejes que se cruzan, casi siempre perpendicularmente entre sí.</li>
+
+            <h4>Operadores Eléctricos</h4>
+            <p>Son operadores que almacenan una energía o fuerza y la transforma en otro tipo de energía.  Las más importantes son:</p>
+            <li><b>Las baterías o pilas:</b> acumulan energía en movimiento</li>
+            <li><b>Los motores:</b> Transforman la energía en movimiento</li>
+            <p>Ejemplos de máquinas complejas</p>
+
+            <ol>
+                <li>Bicicleta</li>
+                <p>Este vehículo es un ejemplo claro de lo que es una máquina compuesta. Se impulsa mediante la fuerza que se ejerce con los piés sobre el pedal, haciendo que las ruedas unidas al marco giren y permitiendo el desplazamiento.</p>
+                
+                <li>Grúa</li>
+                <p>Es una máquina que permite subir y bajar elementos pesados o cuyo movimiento puede resultar complicado. Las cargas son alzadas siendo colocadas en un gancho que se encuentra al final de una cuerda o cadena.
+                    Esta máquina fue una de las grandes creaciones de la humanidad, dado que facilitó la construcción de edificios altos y sus orígenes se remontan a la Antigua Grecia.
+                </p>
+
+                <li>Gato del coche</li>
+                <p>Sirve para elevar objetos que tienen un gran peso, como lo es el coche o un mueble muy pesado. Funciona utilizando una palanca y pueden ser mecánicos o hidráulicos.</p>
+
+                <li>Cerradura</li>
+                <p>Es un mecanismo metálico que se incorpora en puertas y cajones, el cual se compone de una parte que impide que se puedan abrir.<br>
+                    Al incorporar el elemento que lo desactiva, ya sea una llave o en las versiones más recientes una huella digital, la cerradura se desbloquea y permite acceder al interior de la casa o al contenido del cajón.
+                </p>
+
+                <li>Abrelatas</li>
+                <p>Es un dispositivo utilizado para abrir latas de metal.</p>
+
+                <li>Coche</li>
+                <p>Vehículo en el que, al introducirse la llave en el contacto, se activa el motor el cual permite que los ejes que sujetan las ruedas situadas en la parte inferior del coche puedan moverse y así permitir el desplazamiento.</p>
+            </ol>
+                
+            <h2>Un ejemplo Newtoniano de tiro parabólico.</h2>
+            <p>El tiro parabólico es el ejemplo cásico del uso de las tres leyes, la gravitación universal y el cálculo diferencial, en resumen, la esencia 
+                del trabajo de Newton. Se obtiene la trayectoria de un cuerpo sujeto a la aceleración de la gravedad suponiéndola de dirección y sentido 
+                constante, y resulta ser una parábola.<br>
+                Conviene recordar que esta simplificación no se puede realizar siempre. Por ejemplo en un campo gravitatorio planetario, dos posiciones 
+                orbitales separadas no poseen gravedad paralela. La gravedad apunta siempre hacia el centro del planeta, lo que produce órbitas elípticas. 
+                La aproximación parabólica para objetos pequeños en la superficie de la tierra, no es más que una simplificación conveniente que supone una 
+                Tierra plana.<br>
+                Supongase que se lanza una pelota a 45° de inclinación, tal que sus velocidades vertical y horizontal sean de 40Kms/hora respectivamente.
+            </p>
+            <div class="image">
+                <img src="https://fisicalandia.com/wp-content/uploads/2019/03/Newton-Tiro-Parabolico.jpg" alt="">
+            </div>
+            <p>De la definición diferencial de aceleración se puede realizar esta deducción bien conocida:</p>
+            <div class="image">
+                <img src="img/Formula5.JPG" alt="">
+            </div>
+            <p>Desarrollando ahora la velocidad como diferencial del espacio recorrido respecto del tiempo, se obtiene la ecuación del movimiento rectilíneo 
+                uniformemente acelerado.
+            </p>
+            <div class="image">
+                <img class="image" src="img/Formula6.JPG" alt="">
+            </div>
+            <p>Esta última ecuación se puede aplicar a este problema. Se tendrá una ecuación particular para la componente horizontal del movimiento y otra 
+                para la componente vertical. Suponiendo que <img src="img/s.JPG" alt="">0 = 0 y que ax = 0 (la gravedad es sólo vertical porque no se considera 
+                la fuerza centrífuga de rotación de la tierra, ni Coriolis), se pueden escribir las ecuaciones escalares para las componentes del vector de 
+                posición <img src="img/s.JPG" alt=""> como
+            </p>
+            <div class="image">
+                <img src="img/Formula7.JPG" alt="">
+            </div>
+            <p>Se trata de una pareja de ecuaciones paramétricas, en las que el parámetro es el tiempo. Se obtienen para cada instante de tiempo las componentes
+                x e y
+            </p>
+            <div class="btnContainer">
+                <a href="emulador.html" type="button" class="btn btn-danger">Simulacion de Tiro Parabólico</a>
+            </div>
+            <h2>Un poco de software</h2>
+            <p>Para relajarse un poco, se toma ahora algún software de matemáticas, por ejemplo Microsoft Mathematics. Permite ecuaciones paramétricas introduciendo 
+                los valores mínimo y máximo del parámetro. Si se introducen las ecuaciones para ver la gráfica de este movimiento estudiado, sale una bonita parábola.
+            </p>
+            <div class="image">
+                <img src="https://fisicalandia.com/wp-content/uploads/2019/03/Newton-grafica-tiro-parab%C3%B3lico.jpg" alt="">
+            </div>
+            <p>Como era prometido, queda resuelta la trayectoria.<br>
+                Y aunque la física de Newton se ha desarrollado mucho más de lo presentado aquí, sólo quería presentar sus bases y este post termina aquí. 
+                Si te gusta el tema, merece la pena seguir la pista a la reformulación de la mecánica realizada por Lagrange y Hamilton. 
+                Está llena de sorpresas y llegarás hasta los principios teóricos de la mecánica cuántica.
+            </p>
+
+            <h2>Fuerza y Leyes de Newton</h2>
+            <h3>Fuerza:</h3>
+            <p>Este concepto está basado en las investigaciones realizadas sobre dinámica, y fue resuelto por primera vez por el fisicomatemático inglés Isaac Newton en su tratado "Principia Mathematica", quién tomó como base el principio de inercia de Galileo, y a partir del cual enunció lo que se le conoce como la primera ley de Newton que dice: "todo cuerpo se mantiene en estado de reposo o de movimiento constante en línea recta mientras que otra fuerza no modifique dicho estado". Sin embargo, la definición explícita de fuerza es definida mediante la segunda ley de Newton, la cual expresa: " el producto de la masa de un cuerpo por su aceleración es directamente proporcional a la magnitud de la fuerza que actúa sobre dicho cuerpo".<br>
+                En el Sistema Internacional de Unidades, la unidad de medida de la fuerza es el newton que se representa con el símbolo N, en reconocimiento a Isaac Newton por su aporte a la física, especialmente a la mecánica clásica. El newton es una unidad derivada del Sistema Internacional de Unidades que se define como la fuerza necesaria para proporcionar una aceleración de 1m/s² a un objeto de 1kg de masa.
+            </p>
+
+            <h3>Leyes de newton</h3>
+            <div class="image">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/abccolor/YULPJS3S4VF6DCSG35GETXUXQU.jpg" alt="">
+            </div>
+
+            <h4>Primera ley de Newton o Ley de la inercia</h4>
+            <p>La primera Ley de Newton contradice un principio formulado en la antigüedad por el sabio griego Aristóteles, para quien un cuerpo solo podía conservar su movimiento si se le aplicaba una fuerza sostenida. Newton establece en cambio que:<br>
+                “Todo cuerpo persevera en su estado de reposo o de movimiento rectilíneo uniforme a no ser que sea obligado a cambiar su estado por fuerzas impresas sobre él”.<br>
+                Por ende, un objeto que se desplaza o que está en reposo no puede alterar dicho estado, a menos que se le aplique algún tipo de fuerza.<br>
+                Según este principio, el movimiento involucra magnitudes que son vectoriales (dotadas de dirección y sentido). Es posible calcular la aceleración a partir de la velocidad inicial y la final. Además, propone que los cuerpos en movimiento tienden siempre al desplazamiento en una trayectoria recta y uniforme.<br>
+            </p>
+
+            <h4>Segunda ley o Ley fundamental de la dinámica</h4>
+            <p>La segunda ley de Newton relaciona fuerza, masa y aceleración.<br>
+                En esta ley Newton define el concepto de fuerza (representado con F), expresando que:<br>
+                “El cambio de un movimiento es directamente proporcional a la fuerza impresa en él y tiene lugar según la línea recta a lo largo de la cual aquella fuerza se imprime”.<br>
+                Esto quiere decir que la aceleración de un objeto en movimiento responde siempre a la cantidad de fuerza que se le aplique en un momento dado, para modificar su trayectoria o velocidad.<br>
+                De estas consideraciones nace la ecuación fundamental de la dinámica para objetos de masa constante:<br>
+                Fuerza resultante (Fresultante) = masa (m) x aceleración (a)<br>
+                Una fuerza neta actúa sobre un cuerpo de masa constante y le proporciona una aceleración determinada. En los casos en que la masa no sea constante, la fórmula se enfocará más bien en la cantidad de movimiento (p), según la fórmula siguiente:<br>
+                Cantidad de movimiento (p) = masa (m) x velocidad (v). Por ende: Fneta = d (m.v) / dt.<br>
+                Así se puede relacionar la fuerza con la aceleración y la masa, sin importar si ésta última es variable o no.
+            </p>
+
+            <h4>Tercera ley o Principio de acción y reacción</h4>
+            <p>“A toda acción le corresponde una reacción igual, pero en sentido contrario: lo que quiere decir que las acciones mutuas de dos cuerpos siempre son iguales y dirigidas en sentido opuesto”.<br>
+                De esta manera, siempre que se ejerce una fuerza sobre un objeto, éste ejerce una fuerza semejante en dirección contraria y de igual intensidad, por lo que si dos objetos (1 y 2) interactúan, la fuerza ejercida por uno sobre el otro será igual en magnitud a la ejercida por el otro sobre el primero, pero de signo opuesto.<br>
+                Es decir: F1-2 = ­F2-1. A la primera fuerza se le conocerá como “acción” y a la segunda fuerza como “reacción”.<br>
+                Para demostrar esta tercera ley alcanza con observar lo que ocurre cuando dos personas de peso similar van corriendo en direcciones opuestas y chocan: ambas recibirán la fuerza del otro y saldrán despedidos en sentido opuesto. Lo mismo ocurre al rebotar una pelota en la pared y sale despedida en dirección contraria, con una fuerza semejante a la que proyectamos al arrojarla.<br>
+            </p>
+
+            <h3>Aplicación de las leyes de newton</h3>
+            <p>Las leyes de Newton son tres principios que analizan cómo hay fuerzas que actúan sobre los objetos para que estos se muevan.<br>
+                Son usadas para explicar el movimiento de los carros, las bicicletas y muchas cosas que ves a tu alrededor, hasta tus propios movimientos, al correr y saltar.
+            </p>
+
+            <h4>Para la primera ley</h4>
+            <p>Una persona se encuentra situada en la parte posterior de un vehículo que se desplaza a una velocidad de 80km/h. Este vehículo al momento de girar hacia la derecha o la izquierda producirá que el sujeto ubicado en la parte posterior tienda a seguir en línea recta (el movimiento que tenía), pero el roce de la superficie del asiento producirá que su movimiento no se prolongue exageradamente. Por tal motivo cuando vamos en algún vehículo y este frena de manera abrupta sentimos que nos movemos hacia delante del asiento involuntariamente, y es que como mantenemos una velocidad constante (la que lleve el vehículo) y de repente éste frena (fuerza externa que modificó la velocidad) ya no poseemos una velocidad constante y se aplica la ley de la inercia. De ahí la importancia de usar el cinturón de seguridad.</p>
+            
+            <h4>Para la segunda ley</h4>
+            <p>Un ejemplo cotidiano de lo que se conoce como segunda ley de Newton puede ser algo tan simple como que dos sujetos, A y B en el cual A tiene mayor fuerza que B, y estos empujan una mesa, empujando el sujeto A hacia el Este y el sujeto B hacia el Norte. Al sumar las fuerzas obtendremos una fuerza resultante igual al movimiento y aceleración de la mesa. Por lo tanto la mesa se moverá en dirección Noreste pero con mayor inclinación hacia el Este ya que el sujeto A ejerce mayor fuerza que el sujeto B.</p>
+
+            <h4>Para la tercera ley</h4>
+            <p>Un ejemplo para este caso puede ser un hombre que empuja una mesa. En este caso el hombre ejerce una fuerza f1 y la mesa en este caso reacciona y empuja a la persona con una fuerza f2. Para hacer más fácil entender este ejemplo, imagine que el sujeto y la mesa tienen la misma masa y están sobre una superficie lisa sin fricción, en este caso observaríamos que tanto la mesa como la persona se pondrían en un movimiento igual, pero en sentido contrario.</p>
+
+        </div>
+    </section>
 </body>
 </html>
