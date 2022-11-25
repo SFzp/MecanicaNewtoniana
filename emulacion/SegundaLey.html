@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_2daLey.css">
+    <title>Simulacion de la Segunda Ley de Newton</title>
+    <script src="newton_segundaley.js"></script>
+</head>
+<body>
+    <p>Con esta aplicación, se simula una mesa aérea o un riel como herramienta para lograr un movimiento 
+        suave y acelerado. El valor de la aceleración de la gravedad se toma como 9,81 m/s2. Dentro de ciertos 
+        límites, se pueden cambiar la masa del automóvil, la masa de la suspensión y el coeficiente de fricción.<br>
+        El experimento consistió en medir el tiempo de recorrido del rango de medición establecido (pantalla digital, 
+        error de 1 ms) antes de presionar el botón (desde la posición inicial hasta la barrera LS, con un error de 5 mm).<br>
+        Durante el movimiento, los puntos rojos del diagrama espacio-tiempo indican la distancia recorrida en cada instante. 
+        Al final del tiempo de medición, el par de valores correspondiente se muestra en el gráfico. Si luego hace clic en el botón 
+        "Comentar datos" con el mouse, los valores medidos se muestran en una lista. Se puede obtener una serie de hasta 10 medidas.
+    </p>
+    <div id="total">
+        <div id="canvas"><canvas id="cv" width="500" height="440">This browser doesn't support HTML5 canvas!</canvas></div>
+        <div id="panel">
+          <div style="top: 10px;"><button id="bu1" style="background-color: #f36060;">Reset</button></div>
+          <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;">Comenzar</button></div>
+          <div style="top: 90px;"><button id="bu3" style="background-color: #ffffff;" disabled="">Graficar</button></div>
+          <div style="top: 140px;"><span id="ip1a" class="pos1">Masa del Carro:</span></div>
+          <div style="top: 160px;"><span id="ip1b" class="pos1">M = </span><input type="text" id="ip1c"><span id="ip1d" class="pos3">g</span></div>
+          <div style="top: 190px;"><span id="ip2a" class="pos1">Masa Colgante:</span></div>
+          <div style="top: 210px;"><span id="ip2b" class="pos1">m = </span><input type="text" id="ip2c"><span id="ip2d" class="pos3">g</span></div> 
+          <div style="top: 240px;"><span id="ip3a" class="pos1">Coeficiente de Rozamiento:</span></div>
+          <div style="top: 260px;"><span id="ip3b" class="pos1">μ = </span><input type="text" id="ip3c"></div>   
+          <div style="top: 295px;"><span id="lbM" class="pos1">Datos:</span></div> 
+          <div style="top: 320px;"><textarea id="ta" readonly=""></textarea></div>
+        </div>
+    </div>
+
+    <div id="phet">
+        <iframe src="https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_es.html" width="722" height="440" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

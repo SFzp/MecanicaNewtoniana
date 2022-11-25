@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_3raLey.css">
+    <script type="text/javascript" src="newton3a.js"></script>
+    <script type="text/javascript" src="log4javascript.js"></script>
+    <script type="text/javascript" src="principal.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="simulador">
+
+        <div class="container_32">
+          <div class="grid_21 prefix_1">
+
+            <div class="controles-sim">
+
+              <div class="titulo1">
+                Patinador
+              </div>
+              <div class="titulo2">
+                Caja
+              </div>
+
+              <div class="botones">
+                <a href="javascript:;" class="reset resetBtn"><span class="nombre-boton">Repetir</span></a>
+                <a href="javascript:;" class="pause resetBtn"><img src="img/play.png" alt="Iniciar experimento"></a>
+
+                <a href="javascript:;" class="apunte btnAddApunte" title="Apuntar" style="display: none;"><span class="nombre-boton">Apuntar</span></a>
+              </div>
+              <div class="control-masa-p">
+
+                <div class="ctrls" data-block="0">
+                  <span class="valort">Masa</span> = <span class="pval masa-value">60</span> kg
+                  <div class="masa-slider slider  ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-block="0">
+                    slider
+                  <div class="ui-slider-range ui-widget-header ui-slider-range-max" style="width: 66.6667%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 33.3333%;"></a></div>
+                </div>
+              </div>
+
+              <div class="control-masa">
+                <div class="ctrls" data-block="1">
+                  <span class="valort">Masa</span> = <span class="pval masa-value">60</span> kg
+                  <div class="masa-slider slider  ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-block="1">
+                    slider
+                  <div class="ui-slider-range ui-widget-header ui-slider-range-max" style="width: 63.1579%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 36.8421%;"></a></div>
+                </div>
+              </div>
+              <div class="control-fuerza">
+                <div class="ctrls">
+                  <span class="valort">F = </span><span class="pval fuerza-value">60</span> kg*m/s<sup>2</sup>
+                  <div class="fuerza-slider slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                    slider
+                  <div class="ui-slider-range ui-widget-header ui-slider-range-max" style="width: 40%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 60%;"></a></div>
+                </div>
+              </div>
+
+              <div class="hud-flotante1" data-block="0">
+                t: <span id="t0" class="tiempo">0.00</span> s
+                <br>
+                a: <span id="a0" class="aceleracion">-0.500</span> m/s<sup>2</sup>
+                <br>
+                v: <span id="v0" class="velocidad">0.00</span> m/s
+                <br>
+                d: <span id="d0" class="distancia">0.00</span> m
+                <br>
+
+                <br>
+
+              </div>
+              <div class="hud-flotante2" data-block="1">
+                t: <span id="t1" class="tiempo">0.00</span> s
+                <br>
+                a: <span id="a1" class="aceleracion">0.500</span> m/s<sup>2</sup>
+                <br>
+                v: <span id="v1" class="velocidad">0.00</span> m/s
+                <br>
+                d: <span id="d1" class="distancia">0.00</span> m
+              </div>
+            </div>
+
+            <div style="background-color: #fff;">
+              <canvas class="canvasSimulador" width="650" height="220"></canvas>
+            </div>
+
+            <div class="clearfix">
+
+            </div>
+
+            <div>
+
+              <div id="ga_a_experimentos" style="background: rgb(238, 238, 238); width: 220px; height: 246px; border: 1px solid rgb(0, 0, 0); float: left; padding: 0px; position: relative;"><div class="label_grafica"> Aceleración (m/s<sup>2</sup>)</div><canvas class="base" width="220" height="246"></canvas><canvas class="overlay" width="220" height="246" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:4px;top:234px;width:44px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:52px;top:234px;width:44px">2</div><div class="tickLabel" style="position:absolute;text-align:center;left:99px;top:234px;width:44px">4</div><div class="tickLabel" style="position:absolute;text-align:center;left:147px;top:234px;width:44px">6</div><div class="tickLabel" style="position:absolute;text-align:center;left:194px;top:234px;width:44px">8</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:186px;right:201px;width:19px">-0.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:110px;right:201px;width:19px">0.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:33px;right:201px;width:19px">0.5</div></div></div><div class="label_tiempo"> Tiempo (s)</div></div>
+              <div id="ga_v_experimentos" style="background: rgb(238, 238, 238); width: 220px; height: 246px; border: 1px solid rgb(0, 0, 0); float: left; padding: 0px; position: relative;"><div class="label_grafica"> Velocidad (m/s)</div><canvas class="base" width="220" height="246"></canvas><canvas class="overlay" width="220" height="246" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:10px;top:234px;width:44px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:56px;top:234px;width:44px">2</div><div class="tickLabel" style="position:absolute;text-align:center;left:102px;top:234px;width:44px">4</div><div class="tickLabel" style="position:absolute;text-align:center;left:148px;top:234px;width:44px">6</div><div class="tickLabel" style="position:absolute;text-align:center;left:194px;top:234px;width:44px">8</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:204px;right:195px;width:25px">-0.50</div><div class="tickLabel" style="position:absolute;text-align:right;top:160px;right:195px;width:25px">-0.25</div><div class="tickLabel" style="position:absolute;text-align:right;top:116px;right:195px;width:25px">0.00</div><div class="tickLabel" style="position:absolute;text-align:right;top:73px;right:195px;width:25px">0.25</div><div class="tickLabel" style="position:absolute;text-align:right;top:29px;right:195px;width:25px">0.50</div></div></div><div class="label_tiempo"> Tiempo (s)</div></div>
+              <div id="ga_d_experimentos" style="background: rgb(238, 238, 238); width: 220px; height: 246px; border: 1px solid rgb(0, 0, 0); float: left; padding: 0px; position: relative;"><div class="label_grafica"> Distancia (m)</div><canvas class="base" width="220" height="246"></canvas><canvas class="overlay" width="220" height="246" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:-5px;top:234px;width:44px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:45px;top:234px;width:44px">2</div><div class="tickLabel" style="position:absolute;text-align:center;left:95px;top:234px;width:44px">4</div><div class="tickLabel" style="position:absolute;text-align:center;left:144px;top:234px;width:44px">6</div><div class="tickLabel" style="position: absolute; text-align: right; left: 194px; top: 234px; width: 24px;">8</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:212px;right:210px;width:10px">-3</div><div class="tickLabel" style="position:absolute;text-align:right;top:178px;right:210px;width:10px">-2</div><div class="tickLabel" style="position:absolute;text-align:right;top:144px;right:210px;width:10px">-1</div><div class="tickLabel" style="position:absolute;text-align:right;top:110px;right:210px;width:10px">0</div><div class="tickLabel" style="position:absolute;text-align:right;top:75px;right:210px;width:10px">1</div><div class="tickLabel" style="position:absolute;text-align:right;top:41px;right:210px;width:10px">2</div><div class="tickLabel" style="position:absolute;text-align:right;top:7px;right:210px;width:10px">3</div></div></div><div class="label_tiempo"> Tiempo (s)</div></div>
+            </div>
+
+          </div>
+          <div class="clearfix"></div>
+
+        </div>
+
+      </div>
+</body>
+</html>
