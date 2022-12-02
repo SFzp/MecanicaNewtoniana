@@ -1,19 +1,14 @@
-/*funcion para simular overriding en metodo de clases extendidas y el objeto super
- * @param subClass clase que extiende
- * @param funcName nombre de la funcion a extender
- * @param func funcion que extiende
- */
 function _override(subClass, funcName, func) {
 	var _super = subClass._superClass;
 	subClass.prototype[funcName] = (function(name, fn) {
 		return function() {
 
 			var tmp = this._super;
-			// Add a new ._super() method that is the same method
-			// but on the super-class
-			this._super = _super//[name];
-			// The method only need to be bound temporarily, so we
-			// remove it when we're done executing
+			
+			
+			this._super = _super
+			
+			
 			var ret = fn.apply(this, arguments);
 			this._super = tmp;
 			return ret;
@@ -24,14 +19,9 @@ function _override(subClass, funcName, func) {
 
 }
 
-/*funcion para simular herencia y el objeto super
- * @param subClass subclase
- * @param superClass  superclase
- * @param subClassDefinition  definicion de subclase
- */
 function _extends(subClass, superClass, subClassDefinition) {
 
-	// Define sub-class
+	
 	subClass.prototype = new superClass;
 	subClass.prototype.constructor = subClass;
 	subClass._superClass = new superClass;
@@ -98,7 +88,7 @@ function handleImgLoad(imgId, dataObj) {
 
 function Phase(gSettings, divClassId, context) {
 
-	//Definicion de variables de clase (instancia)
+	
 	this.id = divClassId;
 	this.phaseDiv = $('.' + divClassId, context);
 	this.context = context;
@@ -112,10 +102,6 @@ function Phase(gSettings, divClassId, context) {
 
 }
 
-/*
- * Definicion de funciones de clase
- * y variables "estaticas"
- */
 Phase.prototype = {
 	_control : function() {
 		if (this.isLoaded) {

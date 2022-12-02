@@ -53,7 +53,6 @@ function mainInit(contexto) {
     settings.phases[settings.currentPhase].jumpToPhase(1);
   });
   addSettingsToMenu0(settings);
-//setFase0();
 
   $('#btnEntrar').click(function() {
 	$('.ventana.fichaDidactica , .ventana.creditos, .ventana.bibliografia', contexto).hide();
@@ -61,7 +60,7 @@ function mainInit(contexto) {
   });
 
   //este se ejecuta en el show de la clase padre Phase
-  settings.onShow = null//function() {};
+  settings.onShow = null
 
   loadImgs(settings);
 }

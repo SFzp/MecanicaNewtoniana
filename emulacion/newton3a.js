@@ -160,14 +160,14 @@ Newton3a.prototype = {
     var g00 = new createjs.Graphics();
     g00.setStrokeStyle(1);
     g00.beginStroke("#aaaacc").beginFill("#ddddee").drawRect(-200, 0, 200 + this.xc, 240);
-    //g00.beginStroke("#9999cc").beginFill("#eeeecc").drawRect(-200, 0, 200 + this.xc, 240);
+    
     var r00 = new createjs.Shape(g00);
     this.stage.addChild(r00);
 
 
     var g02 = new createjs.Graphics();
     g02.setStrokeStyle(1);
-    //g02.beginStroke("#aaaa00").beginFill("#ddddee").drawRect(this.xc, 0, 600, 240);
+    
     g02.beginStroke("#9999cc").beginFill("#eeeecc").drawRect(this.xc, 0, 600, 240);
     var r02 = new createjs.Shape(g02);
     this.stage.addChild(r02);
@@ -324,14 +324,14 @@ Newton3a.prototype = {
     var b0 = this0.block[0];
     
     
-    //if (Math.abs(b0.distanciaF)>3.10 || Math.abs(b1.distanciaF)>3.20) return;
     
-   // if(b0.length>800) return;
+    
+   
 
     if(this.t>(8-h)){
       if(!this.apuntado){
       this.btnApuntar.show();
-        //this.apuntado=false;
+        
       }else{
         this.btnApuntar.hide();
       }
